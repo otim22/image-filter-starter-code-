@@ -21,11 +21,12 @@ const router: Router = Router();
 //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
 /**************************************************************************** */
-router.get("/filteredimage", requireAuth, async(req: Request, res: Response) =>{
+router.get("/filteredimage", requireAuth, async(req: Request, res: Response) => {
 
     type MyQuery = {
       image_url: string;
     };
+    
     const { image_url } = req.query as MyQuery;
 
     //Check if the image url exists
