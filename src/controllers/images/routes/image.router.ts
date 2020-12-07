@@ -44,7 +44,7 @@ router.get("/filteredimage", requireAuth, async(req: Request, res: Response) => 
       });
       const saved_item = await item.save(); //save the new image object to database
       console.log(saved_item);
-      res.status(200).sendFile(filtered_url, () => {deleteLocalFiles([filtered_url]);});
+      res.status(200).sendFile(filtered_url, () => {deleteLocalFiles([filtered_url])});
     }
     catch (e) {
       res.status(400).send(e);
