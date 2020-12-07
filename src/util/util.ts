@@ -1,5 +1,5 @@
 import fs from 'fs';
-import Jimp = require('jimp');
+import Jimp from 'jimp';
 var Path = require('path');
 import Axios from 'axios';
 import * as AWS from './../aws';
